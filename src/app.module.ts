@@ -8,6 +8,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { join } from 'path';
 
+import models from './models';
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -18,7 +20,7 @@ import { join } from 'path';
       database: process.env.DATABASE,
       username: process.env.USERNAME,
       password: process.env.PASSWORD,
-      models: [],
+      models: [...models],
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,

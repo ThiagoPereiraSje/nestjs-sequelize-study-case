@@ -1,9 +1,8 @@
+import type { Knex } from 'knex';
+
 // Update with your config settings.
 
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
-module.exports = {
+const config: { [key: string]: Knex.Config } = {
   development: {
     client: 'postgresql',
     connection: {
@@ -48,3 +47,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = config;
