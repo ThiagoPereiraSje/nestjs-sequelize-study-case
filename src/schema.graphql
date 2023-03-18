@@ -1,0 +1,8 @@
+type Query {
+  cats: [Cat]
+}
+
+type Cat {
+  id: Int
+  name: String
+}
