@@ -1,17 +1,29 @@
 version: '3'
 
 volumes:
-  postgres_data:
+  dev_postgres_data:
+    driver: local
+  test_postgres_data:
     driver: local
 
 services:
   dev_db_postgres:
     image: postgres:13
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - dev_postgres_data:/var/lib/postgresql/data
     ports:
       - 5432:5432
     environment:
       POSTGRES_DB: dev_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  test_db_postgres:
+    image: postgres:13
+    volumes:
+      - test_postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: test_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
