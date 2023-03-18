@@ -44,7 +44,7 @@ module.exports = {
       directory: './migrations/dev',
     },
     seeds: {
-      directory: './migrations/dev/seeds',
+      directory: './migrations/test/seeds',
     },
   },
 };
