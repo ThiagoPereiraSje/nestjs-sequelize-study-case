@@ -43,7 +43,7 @@ const config: { [key: string]: Knex.Config } = {
       directory: './migrations/dev',
     },
     seeds: {
-      directory: './migrations/test/seeds',
+      directory: './migrations/dev/seeds',
     },
   },
 };
