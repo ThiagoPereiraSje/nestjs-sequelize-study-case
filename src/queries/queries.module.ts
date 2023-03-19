@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { QueriesService } from './queries.service';
+import { CatService } from './cat/cat.service';
 
 @Module({
-  providers: [QueriesService]
+  imports: [],
+  providers: [CatService],
 })
 export class QueriesModule {}
