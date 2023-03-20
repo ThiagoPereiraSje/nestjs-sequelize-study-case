@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 
 export const databaseProviders = [
   {
-    provide: 'DEV_DB',
+    provide: 'SEQUELIZE',
     useFactory: async () => {
       const dirname = __dirname.split('/database')[0];
 
