@@ -6,7 +6,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { join } from 'path';
-import { QueriesModule } from './queries/queries.module';
+import { CrudModule } from './crud/crud.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
@@ -22,7 +22,7 @@ import { DatabaseModule } from './database/database.module';
         outputAs: 'class',
       },
     }),
-    QueriesModule,
+    CrudModule,
   ],
   controllers: [AppController],
   providers: [AppService],

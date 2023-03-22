@@ -6,4 +6,4 @@ import { CatService } from './cat/cat.service';
   imports: [DatabaseModule],
   providers: [CatService],
 })
-export class QueriesModule {}
+export class CrudModule {}
