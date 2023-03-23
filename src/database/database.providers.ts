@@ -7,12 +7,12 @@ export const databaseProviders = [
       const dirname = __dirname.split('/database')[0];
 
       const db = new Sequelize({
-        dialect: process.env.DIALECT as any,
-        host: process.env.HOST,
-        port: parseInt(process.env.PORT),
-        database: process.env.DATABASE,
-        username: process.env.USERNAME,
-        password: process.env.PASSWORD,
+        dialect: process.env.DB_DIALECT as any,
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT),
+        database: process.env.DB_DATABASE,
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
         models: [`${dirname}/models`],
       });
 
